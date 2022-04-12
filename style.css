@@ -1,0 +1,184 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* VARIABLES */
+
+:root {
+    --header-height: 5rem;
+
+    /* COLOR */
+    --base-color: #EEEDE7;
+    --navy-blue: #05445E;
+    --blue-grotto: #189AB4;
+    --blue-green: #75E6DA;
+    --baby-blue: #D4F1F4;
+
+}
+
+/* BASE */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--base-color);
+    font: 400 1rem "DM Sans", sans-serif;
+}
+
+/* CLASS */
+
+.container {
+    margin: 0 1.5rem;
+}
+
+.toggle {
+    color: var(--baby-blue);
+    font-size: 1.5rem;
+}
+
+.grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.title {
+    font: 700 1.31rem "Poppins", sans-serif;
+}
+
+.button {
+    padding: 1rem;
+    background-color: var(--blue-grotto);
+    border-radius: 0.5rem;
+    width: fit-content;
+    color: var(--baby-blue);
+    font: 500 1rem "DM Sans", sans-serif;
+    transition: background 0.5s;
+    transition: color 0.5s;
+}
+
+.button:hover{
+    background-color: var(--blue-green);
+    color: var(--navy-blue);
+}
+
+.divider {
+    height: 3px;
+    background-color: var(--blue-grotto);
+}
+
+.section {
+    padding: 1rem 0;
+}
+
+.section .title {
+    margin-bottom: 1rem;
+}
+/* LOGO */
+
+.logo span {
+    color: var(--blue-green);
+}
+
+.text {
+    text-align: center;
+}
+
+/* DOG DIVIDER */
+
+/* TODO: AJUSTAR IMAGEM */
+
+#dog-divider {
+    width: 14rem;
+    z-index: 90;
+    position: relative;
+    bottom: -1.4rem;
+}
+
+.dog-divider {
+    display: flex;
+    justify-content: center;
+}
+/* HEADER */
+
+#header {
+    border-bottom: 3px solid #189AB4;
+    width: 100%;
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    background-color: var(--navy-blue);
+}
+
+/* NAVIGATION */
+
+/* TODO: TOGGLE */
+nav {
+    width: 100%;
+    height: var(--header-height);
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav .title {
+    color: var(--baby-blue);
+}
+
+/* HOME */
+#home {
+    overflow: hidden;
+}
+
+#home img {
+    box-shadow: 0.25rem 0.25rem 2px  1px var(--navy-blue);
+}
+
+#home .aux {
+    display: flex;
+    justify-content: center;
+}
+
+#home h2 {
+    margin-bottom: 1rem;
+}
+
+/* ABOUT */
+
+#about {
+    background-color: white;
+    padding-top: 2rem;
+}
+
+/* ADOPT */
+
+/* TODO: TUDO */
+
+/* FOOTER */
+
+footer {
+    height: 5rem;
+    background-color: var(--navy-blue);
+}
+
+@media(min-width: 1200px) {
+
+    /* class */
+    .container {
+        width: 940px;
+        margin: 0 auto;
+    }
+
+}
