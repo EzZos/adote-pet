@@ -7,6 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!-- STYLE -->
         <link rel="stylesheet" href="style.css" />
+        <!-- FAVICON -->
         <link
             rel="shortcut icon"
             href="./assets/favicon.ico"
@@ -19,14 +20,17 @@
             href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
             rel="stylesheet"
         />
+        <!-- SWIPER -->
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+        />
     </head>
     <body>
         <header id="header">
             <nav class="container">
                 <h1>
-                    <a class="title logo" href="#home"
-                        >Adote<span>Pet</span></a
-                    >
+                    <a class="title logo" href="#home">Adote<span>Pet</span></a>
                 </h1>
                 <!-- <div class="menu">...</div> -->
                 <div class="icon-menu toggle">...</div>
@@ -40,7 +44,9 @@
                         alt="Mulher segurando gato"
                     />
                     <div class="text">
-                        <h2 class="title">Ajude a melhorar a vida dos nossos pets!</h2>
+                        <h2 class="title">
+                            Ajude a melhorar a vida dos nossos pets!
+                        </h2>
                         <p>
                             Adotando um pet você nos possibilita a ajudar mais
                             animais!
@@ -78,24 +84,61 @@
                     </div>
                 </div>
             </section>
+
             <div class="divider"></div>
+
             <section class="section" id="adopt">
                 <div class="container">
                     <div class="text">
                         <h2 class="title">Adote agora!</h2>
                     </div>
-                    <div>
-                        <img src="./assets/images/pets/cagado.jpg" alt="">
-                        <img src="./assets/images/pets/gato-na-estante.jpg" alt="">
-                        <img src="./assets/images/pets/yorkshire-terrier-cacador.jpg" alt="">
-                        <img src="./assets/images/pets/vira-lata-caramelo.jpg" alt="">
-                        <img src="./assets/images/pets/cachorro-salsicha.jpg" alt="">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img
+                                    src="./assets/images/pets/gato-na-estante.jpg"
+                                    alt="gato em estante"
+                                />
+                                <h2 class="title text">Jupy</h2>
+                            </div>
+                            <div class="swiper-slide">
+                                <img
+                                    src="./assets/images/pets/cagado.jpg"
+                                    alt="cágado"
+                                />
+                                <h2 class="title text">Manu</h2>
+                            </div>
+                            <div class="swiper-slide">
+                                <img
+                                src="./assets/images/pets/vira-lata-caramelo.jpg"
+                                alt="cachorro vira lata caramelo"
+                                />
+                                <h2 class="title text">Lelo</h2>
+                            </div>
+                            <div class="swiper-slide">
+                                <img
+                                src="./assets/images/pets/cachorro-salsicha.jpg"
+                                alt="cachorro salsicha"
+                                />
+                                <h2 class="title text">Lina</h2>
+                            </div>
+                            <div class="swiper-slide ">
+                                <img class="glass"
+                                    src="./assets/images/pets/yorkshire-terrier-cacador.jpg"
+                                    alt="yorkshire terrier caçador"
+                                />
+                                <h2 class="title text">Fred</h2>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
             </section>
         </main>
-        <footer class="section">
-
-        </footer>
+        <footer class="section"></footer>
+        <!-- SWIPER -->
+        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+        <!-- SCRIPT -->
+        <script src="main.js"></script>
     </body>
 </html>

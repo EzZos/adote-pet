@@ -86,16 +86,24 @@ body {
 .section .title {
     margin-bottom: 1rem;
 }
+
+.text {
+    text-align: center;
+}
+
 /* LOGO */
 
 .logo span {
     color: var(--blue-green);
 }
 
-.text {
-    text-align: center;
+#adopt .glass {
+    background: rgba(173, 165, 165, 0.42);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(13px);
+    -webkit-backdrop-filter: blur(13px);
 }
-
 /* DOG DIVIDER */
 
 /* TODO: AJUSTAR IMAGEM */
@@ -164,7 +172,26 @@ nav .title {
 
 /* ADOPT */
 
-/* TODO: TUDO */
+#adopt .title {
+    margin: 0;
+}
+
+#adopt .swiper-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+#adopt .swiper-slide {
+    display: grid;
+    place-content: center;
+}
+
+#adopt img {
+    width: 14rem;
+    border-radius: 0.5rem;
+}
+
 
 /* FOOTER */
 
@@ -179,6 +206,12 @@ footer {
     .container {
         width: 940px;
         margin: 0 auto;
+    }
+
+    /* ADOPT */
+
+    #adopt img {
+        width: 20rem;
     }
 
 }
