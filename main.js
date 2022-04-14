@@ -41,6 +41,6 @@ const pet = document.querySelectorAll(".pet");
 
 for(const element of pet) {
     element.addEventListener("click", (event) => {
-        activeModal(event.path[0].id + "-modal");
+        activeModal(event.target.id.toString() + "-modal");
     })
 }

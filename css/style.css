@@ -100,6 +100,10 @@ body {
     font-size: larger;
 }
 
+.list-text {
+    font: 500 1.3rem "DM Sans", sans-serif
+}
+
 .pet {
     cursor: pointer;
 }
@@ -108,6 +112,10 @@ body {
 
 .logo span {
     color: var(--blue-green);
+}
+
+strong {
+    font-weight: bold;
 }
 
 /* DOG DIVIDER */
@@ -330,4 +338,16 @@ footer .socials a:hover {
         width: 8rem;
     }
 
+}
+
+@media (min-width:768px) {
+    
+    #home .container{
+        display: flex;
+        align-items: center;
+    }
+
+    #home img {
+        width: 23rem;
+    }
 }
