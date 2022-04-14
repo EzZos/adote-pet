@@ -5,8 +5,11 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name = "author", content="João Zumaêta" >
         <!-- STYLE -->
         <link rel="stylesheet" href="style.css" />
+        <!-- MODAL STYLE -->
+        <link rel="stylesheet" href="modal.css" />
         <!-- FAVICON -->
         <link
             rel="shortcut icon"
@@ -25,6 +28,8 @@
             rel="stylesheet"
             href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
         />
+        <!-- ICONS -->
+        <link rel="stylesheet" href="./assets/fonts/style.css" />
     </head>
     <body>
         <header id="header">
@@ -32,8 +37,6 @@
                 <h1>
                     <a class="title logo" href="#home">Adote<span>Pet</span></a>
                 </h1>
-                <!-- <div class="menu">...</div> -->
-                <div class="icon-menu toggle">...</div>
             </nav>
         </header>
         <main>
@@ -48,12 +51,11 @@
                             Ajude a melhorar a vida dos nossos pets!
                         </h2>
                         <p>
-                            Adotando um pet você nos possibilita a ajudar mais
-                            animais!
+                            Ao adotar um pet, além de fazer um novo amigo, você nos possibilita a ajudar mais animais!
                         </p>
-                    </div>
-                    <div class="aux">
-                        <a href="#adopt" class="button">Quero adotar!</a>
+                        <div class="aux">
+                            <a href="#adopt" class="button">Quero adotar!</a>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -71,16 +73,20 @@
                         <h2 class="title">Sobre nós</h2>
                         <p>
                             A
-                            <strong class="logo">Adote <span>Pet</span></strong>
+                            <strong class="logo">Adote<span>Pet</span></strong>
                             é uma empresa que auxilia o processo de adoção de
-                            animais. Melhorando a vida de diversos pets e
-                            bixinhos em situação de abandono.
+                            animais, melhorando a vida de diversos pets e
+                            bichinhos em situação de abandono.
                         </p>
                         <br />
                         <p>
-                            Fundada em 2022, a empresa já participou em mais de
+                            Fundada em 2022, a empresa já realizou mais de
                             <strong>100</strong> adoções!
                         </p>
+                        <img
+                            src="./assets/images/body/mulher-passeando-com-cachorro.png"
+                            alt="Desenho de gatos pretos"
+                        />
                     </div>
                 </div>
             </section>
@@ -90,12 +96,14 @@
             <section class="section" id="adopt">
                 <div class="container">
                     <div class="text">
-                        <h2 class="title">Adote agora!</h2>
+                        <h2 class="title">Alguns de nossos pets</h2>
                     </div>
                     <div class="swiper mySwiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <img
+                                    class="pet"
+                                    id="jupy"
                                     src="./assets/images/pets/gato-na-estante.jpg"
                                     alt="gato em estante"
                                 />
@@ -103,6 +111,8 @@
                             </div>
                             <div class="swiper-slide">
                                 <img
+                                    id="manu"
+                                    class="pet"
                                     src="./assets/images/pets/cagado.jpg"
                                     alt="cágado"
                                 />
@@ -110,32 +120,213 @@
                             </div>
                             <div class="swiper-slide">
                                 <img
-                                src="./assets/images/pets/vira-lata-caramelo.jpg"
-                                alt="cachorro vira lata caramelo"
+                                    id="lelo"
+                                    class="pet"
+                                    src="./assets/images/pets/vira-lata-caramelo.jpg"
+                                    alt="cachorro vira lata caramelo"
                                 />
                                 <h2 class="title text">Lelo</h2>
                             </div>
                             <div class="swiper-slide">
                                 <img
-                                src="./assets/images/pets/cachorro-salsicha.jpg"
-                                alt="cachorro salsicha"
+                                    id="lina"
+                                    class="pet"
+                                    src="./assets/images/pets/cachorro-salsicha.jpg"
+                                    alt="cachorro salsicha"
                                 />
                                 <h2 class="title text">Lina</h2>
                             </div>
-                            <div class="swiper-slide ">
-                                <img class="glass"
+                            <div class="swiper-slide">
+                                <img
+                                    id="jade"
+                                    class="pet"
+                                    src="./assets/images/pets/calopsita.jpg"
+                                    alt="calopsita"
+                                />
+                                <h2 class="title text">Jade</h2>
+                            </div>
+                            <div class="swiper-slide">
+                                <img
+                                    id="fred"
+                                    class="pet"
                                     src="./assets/images/pets/yorkshire-terrier-cacador.jpg"
                                     alt="yorkshire terrier caçador"
                                 />
                                 <h2 class="title text">Fred</h2>
                             </div>
                         </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
                         <div class="swiper-pagination"></div>
                     </div>
                 </div>
             </section>
+
+            <div class="divider"></div>
+
+            <section class="section" id="contact">
+                <div class="container">
+                    <div class="text">
+                        <h2 class="title">Agende uma visita!</h2>
+                        <p>
+                            Nos envie uma mensagem por WhatsApp e faremos o
+                            agendamento de sua visita para conheçer nossos lindos
+                            pets!<br />É super <strong>fácil</strong> e <strong>rápido</strong>!
+                        </p>
+                    </div>
+                    <div class="aux">
+                        <a
+                            href="https://api.whatsapp.com/send?phone=+5522555554444&text=Olá, gostaria de agendar uma visita para conhecer os pets!"
+                            class="button"
+                            target="_BLANK"
+                            >WhatsApp <i class="icon-whatsapp"></i
+                        ></a>
+                    </div>
+                </div>
+            </section>
         </main>
-        <footer class="section"></footer>
+        <footer class="section">
+            <div class="container">
+                <div class="foto-logo">
+                    <img src="./assets/images/body/logo.png" alt="" />
+                </div>
+                <div class="text">
+                    <h2>
+                        <a class="title logo text" href="#home"
+                            >Adote<span>Pet</span></a
+                        >
+                    </h2>
+                    <p>Rua Felicidade dos Animais, n°57</p>
+                </div>
+                <div class="principal">
+                    <div class="aux">
+                        <h2 class="sub-title">Redes sociais</h2>
+                    </div>
+                    <div class="socials">
+                        <a href="https://instagram.com" target="_BLANK">
+                            <i class="icon-instagram"></i>
+                        <a href="https://facebook.com" target="_BLANK">
+                            <i class="icon-facebook"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!--! MODALS  -->
+        <div class="modal-container" id="jupy-modal">
+            <div class="modal">
+                <i class="icon-x"></i>
+                <div class="animal">
+                    <img
+                        src="./assets/images/pets/gato-na-estante.jpg"
+                        alt="Gato na estante"
+                    />
+                    <h2 class="title">Jupy</h2>
+                </div>
+                <ul class="text">
+                    <li>Idade - 2 anos</li>
+                    <li>Sexo - Fêmea</li>
+                    <li>Porte - Pequeno</li>
+                    <p>Jupy adora subir nos móveis e é muito dengosa</p>
+                </ul>
+            </div>
+        </div>
+
+        <div class="modal-container" id="manu-modal">
+            <div class="modal">
+                <i class="icon-x"></i>
+                <div class="animal">
+                    <img
+                        src="./assets/images/pets/cagado.jpg"
+                        alt="Foto de um cágado"
+                    />
+                    <h2 class="title">Manu</h2>
+                </div>
+                <ul class="text">
+                    <li>Idade - 5 anos</li>
+                    <li>Sexo - Macho</li>
+                    <li>Porte - Pequeno</li>
+                    <p>Manu ama se esconder entre as plantas, mas quando a comida chega é o primeiro a se revelar</p>
+                </ul>
+            </div>
+        </div>
+        <div class="modal-container" id="lelo-modal">
+            <div class="modal">
+                <i class="icon-x"></i>
+                <div class="animal">
+                    <img
+                        class="special-img"
+                        src="./assets/images/pets/vira-lata-caramelo.jpg"
+                        alt="vira lata caramelo"
+                    />
+                    <h2 class="title">Lelo</h2>
+                </div>
+                <ul class="text">
+                    <li>Idade - 3 anos</li>
+                    <li>Sexo - Macho</li>
+                    <li>Porte - Grande</li>
+                    <p>Lelo é muito animado e brincalhão, pode se dizer que sua energia nunca acaba!</p>
+                </ul>
+            </div>
+        </div>
+        <div class="modal-container" id="lina-modal">
+            <div class="modal">
+                <i class="icon-x"></i>
+                <div class="animal">
+                    <img
+                        class="special-img"
+                        src="./assets/images/pets/cachorro-salsicha.jpg"
+                        alt="Foto cão salsicha"
+                    />
+                    <h2 class="title">Lina</h2>
+                </div>
+                <ul class="text">
+                    <li>Idade - 2 anos</li>
+                    <li>Sexo - Fêmea</li>
+                    <li>Porte - Médio</li>
+                    <p>Lina é muito traquila, gosta de um longo e bom chochilo<br><strong>obs:</strong> por ter problemas de coluna, deve-se evitar escadas</p>
+                </ul>
+            </div>
+        </div>
+        <div class="modal-container" id="jade-modal">
+            <div class="modal">
+                <i class="icon-x"></i>
+                <div class="animal">
+                    <img
+                        class="special-img"
+                        src="./assets/images/pets/calopsita.jpg"
+                        alt="Foto de uma Calopsita"
+                    />
+                    <h2 class="title">Jade</h2>
+                </div>
+                <ul class="text">
+                    <li>Idade - 7 anos</li>
+                    <li>Sexo - Fêmea</li>
+                    <li>Porte - Pequeno</li>
+                    <p>Jade curti ouvir música e passa boa parte do dia cantarolando<br>ouvi dizer que ela prefere um reggae &#128064</p>
+                </ul>
+            </div>
+        </div>
+        <div class="modal-container" id="fred-modal">
+            <div class="modal">
+                <i class="icon-x"></i>
+                <div class="animal">
+                    <img
+                        src="./assets/images/pets/yorkshire-terrier-cacador.jpg"
+                        alt="Foto de cachorro yorkishire"
+                    />
+                    <h2 class="title">Fred</h2>
+                </div>
+                <ul class="text">
+                    <li>Idade - 1 ano</li>
+                    <li>Sexo - Macho</li>
+                    <li>Porte - Pequeno</li>
+                    <p>Fred tem o espirito caçador, gosta de explorar o ambiente e caçar garrafinhas pet</p>
+                </ul>
+            </div>
+        </div>
+
         <!-- SWIPER -->
         <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
         <!-- SCRIPT -->

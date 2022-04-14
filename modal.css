@@ -1,0 +1,81 @@
+.modal-container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 100;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-container.show {
+    display: flex;
+}
+
+.modal {
+    background-color: var(--base-color);
+    width: 70%;
+    min-width: 300px;
+    padding: 2.5rem;
+    border: 3px solid var(--navy-blue);
+    position: relative;
+}
+
+.animal {
+    display: grid;
+    place-content: center;
+}
+
+.modal img {
+    clip-path: circle();
+    width: 10rem;
+    margin-bottom: 0.6rem;
+}
+
+.text p {
+    margin-top: 0.5rem;
+}
+
+.modal img.special-img {
+    padding: 0.5rem;
+}
+
+.animal h2 {
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+.icon-x {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    cursor:pointer;
+}
+
+
+@keyframes modal {
+    from {
+        opacity: 0;
+        transform: translateY(-3rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.show .modal {
+    animation: modal .3s;
+}
+
+@media (min-width: 1024px){
+
+    .modal {
+        width: 40%;
+    }
+
+}

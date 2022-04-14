@@ -8,6 +8,10 @@ a {
     text-decoration: none;
 }
 
+ul {
+    list-style: none;
+}
+
 img {
     width: 100%;
     height: auto;
@@ -55,7 +59,11 @@ body {
 }
 
 .title {
-    font: 700 1.31rem "Poppins", sans-serif;
+    font: 700 1.875rem "Poppins", sans-serif;
+}
+
+.sub-title {
+    font: 700 1rem "Poppins", sans-serif;
 }
 
 .button {
@@ -64,7 +72,7 @@ body {
     border-radius: 0.5rem;
     width: fit-content;
     color: var(--baby-blue);
-    font: 500 1rem "DM Sans", sans-serif;
+    font: 500 1.1rem "DM Sans", sans-serif;
     transition: background 0.5s;
     transition: color 0.5s;
 }
@@ -89,6 +97,11 @@ body {
 
 .text {
     text-align: center;
+    font-size: larger;
+}
+
+.pet {
+    cursor: pointer;
 }
 
 /* LOGO */
@@ -97,16 +110,7 @@ body {
     color: var(--blue-green);
 }
 
-#adopt .glass {
-    background: rgba(173, 165, 165, 0.42);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(13px);
-    -webkit-backdrop-filter: blur(13px);
-}
 /* DOG DIVIDER */
-
-/* TODO: AJUSTAR IMAGEM */
 
 #dog-divider {
     width: 14rem;
@@ -119,6 +123,7 @@ body {
     display: flex;
     justify-content: center;
 }
+
 /* HEADER */
 
 #header {
@@ -128,17 +133,17 @@ body {
     display: flex;
     align-items: center;
     background-color: var(--navy-blue);
+    /* margin-bottom: 3rem; */
 }
 
 /* NAVIGATION */
 
-/* TODO: TOGGLE */
 nav {
     width: 100%;
     height: var(--header-height);
     align-items: center;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 nav .title {
@@ -151,12 +156,13 @@ nav .title {
 }
 
 #home img {
-    box-shadow: 0.25rem 0.25rem 2px  1px var(--navy-blue);
+    box-shadow: 0.25rem 0.25rem 5px  1px var(--navy-blue);
 }
 
 #home .aux {
     display: flex;
     justify-content: center;
+    margin-top: 2rem;
 }
 
 #home h2 {
@@ -170,10 +176,19 @@ nav .title {
     padding-top: 2rem;
 }
 
+#about .logo span {
+    color: var(--blue-grotto)    
+}
+
+#about img {
+    width: 10rem;
+    margin-top: 2rem;
+}
+
 /* ADOPT */
 
-#adopt .title {
-    margin: 0;
+#adopt {
+    padding: 1rem;
 }
 
 #adopt .swiper-wrapper {
@@ -188,19 +203,98 @@ nav .title {
 }
 
 #adopt img {
-    width: 14rem;
+    width: 17rem;
     border-radius: 0.5rem;
 }
 
+#adopt .swiper-button-prev,
+#adopt .swiper-button-next {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* CONTACT */
+
+#contact {
+    background-color: white;
+}
+
+#contact .aux{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
 
 /* FOOTER */
 
 footer {
-    height: 5rem;
+    width: 100%;
+    padding: 1rem;
+    height: fit-content;
     background-color: var(--navy-blue);
+    
 }
 
-@media(min-width: 1200px) {
+footer .foto-logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .foto-logo img {
+    width: 5rem;
+}
+
+footer .text {
+    margin-bottom: 1.5rem;
+}
+footer .text a{
+    color: var(--baby-blue);
+}
+footer .text p {
+    color: var(--base-color);
+}
+
+footer .principal {
+    justify-content: center;
+}
+
+footer .principal h2 {
+    color: var(--baby-blue);
+    margin-bottom: 0.5rem;
+}
+
+footer .aux {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+footer i {
+    font-size: 1.5rem;
+    color: var(--baby-blue);
+    transition: 0.3s;
+}
+
+footer .socials {
+    display: grid;
+    justify-content: center;
+    grid-auto-flow: column;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+footer .socials a {
+    transition: 0.3s;
+    display: inline-block;
+}
+
+footer .socials a:hover {
+    transform: translateY(-8px);
+}
+
+@media(min-width: 1024px) {
 
     /* class */
     .container {
@@ -208,10 +302,32 @@ footer {
         margin: 0 auto;
     }
 
+    /* HOME */
+    #home .container{
+        display: flex;
+        align-items: center;
+    }
+
+    #home img {
+        width: 35rem;
+    }
+    
     /* ADOPT */
 
     #adopt img {
         width: 20rem;
+    }
+
+    #adopt .swiper-button-prev,
+    #adopt .swiper-button-next {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* FOOTER */
+
+    footer .foto-logo img{
+        width: 8rem;
     }
 
 }
